@@ -1,0 +1,10 @@
+
+public class Mamifero extends Animal {
+
+	public Mamifero(String nome, double comprimento, int numeroDePatas, String cor, String ambiente,
+			double velocidadeMedia) {
+		super(nome, comprimento, numeroDePatas, cor, ambiente, velocidadeMedia);
+		// TODO Auto-generated constructor stub
+	}
+
+}

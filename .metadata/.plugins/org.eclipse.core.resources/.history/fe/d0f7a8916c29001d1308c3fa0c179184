@@ -1,0 +1,79 @@
+import java.util.Scanner;
+
+/*
+	4) A classe Empresa deve possuir as seguintes funcionalidades (métodos).
+	a. cadastrarEmpregado. Onde será permitido realizar o cadastro passando por parâmetro
+	um objeto Empregado como também um sobrecarga deste método para os dados do
+	empregado de forma separada(nome, idade, etc). O novo empregado será adicionado
+	a um vetor de Empregados existente na classe Empresa.
+	b. obterDadosEmpregado. Onde será passado por parâmetro o CPF de um funcionário e
+	será retornado uma referencia ao objeto(Empregado) do empregado que possui
+	aquele CPF.
+	c. listarEmpregados. Onde será listado o CPF e nome de todos os empregados da
+	empresa.
+	d. listarEmpregadosPorGenero. Onde será passado por parâmetro o sexo(M ou F) e será
+	exibido o CPF e nome de todos os empregados que se encaixarem no valor passado
+	por parâmetro.
+	e. qtdEmpregados. Irá retornar um valor inteiro contendo quantos empregados estão
+	cadastrados na empresa.
+	
+	CPF, nome, idade, sexo(M ou F), cargo e salário.
+	*/
+public class Empresa {
+	Scanner scan = new Scanner(System.in);
+	Empregado emp1 = new Empregado("nome", "a", 1, "b", "b", 1);
+	Empregado[] emp = new Empregado[5];
+	int qtdEmp=0;
+	
+	public void cadastrarEmpregado(Empregado[] emp) {
+		String nome; String cpf; int idade; String sexo; String cargo; double salario;
+		System.out.println("Digite o nome do funcionario: ");
+		nome = scan.next();
+		emp[qtdEmp].setNome(nome);
+		System.out.println("Digite o CPF: ");
+		cpf = scan.next();
+		emp[qtdEmp].setCpf(cpf);
+		System.out.println("Digite a Idade: ");
+		idade = scan.nextInt();
+		emp[qtdEmp].setIdade(idade);
+		System.out.println("Digite o sexo(M/F): ");
+		sexo = scan.next();
+		emp[qtdEmp].setSexo(sexo);
+		System.out.println("Digite o cargo: ");
+		cargo = scan.next();
+		emp[qtdEmp].setCargo(cargo);
+		System.out.println("Digite o salario: ");
+		salario = scan.nextDouble();
+		emp[qtdEmp].setSalario(salario);
+		qtdEmp++;
+	}
+	public void obterdadosEmpregado(String cpf) {
+		for(int i=0; i<qtdEmp; i++) {
+			if(cpf.equalsIgnoreCase(emp[i].getCpf())) {
+				System.out.println("Dados do Funcionario: ");
+				System.out.println("Nome: "+emp[i].getNome());
+				System.out.println("CPF: "+emp[i].getCpf());
+				System.out.println("Idade: "+emp[i].getIdade());
+				System.out.println("Sexo: "+emp[i].getSexo());
+				System.out.println("Cargo: "+emp[i].getCargo());
+				System.out.println("Sálario: "+emp[i].getSexo());
+			}
+			else {
+				System.out.println("Nenhuma registro foi encontrado!!!");
+			}
+		}
+	}
+	public void listarEmpregados() {
+		System.out.println("LISTA DE TODOS OS FUNCIONARIOS:");
+		for(int i=0; i<qtdEmp; i++) {
+			System.out.println("Nome: "+emp[i].getNome());
+			System.out.println("CPF: "+emp[i].getCpf());
+			System.out.println("Idade: "+emp[i].getIdade());
+			System.out.println("Sexo: "+emp[i].getSexo());
+			System.out.println("Cargo: "+emp[i].getCargo());
+			System.out.println("Sálario: "+emp[i].getSexo());
+			System.out.println("-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_");
+		}
+	}
+	
+}

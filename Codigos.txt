@@ -1,0 +1,73 @@
+Exercicio para separar numeros pares e impares de um vetor de 10 posições
+
+try (Scanner scan = new Scanner (System.in)) {
+    int []vetPar = new int[10];
+    int []vetImpar = new int[10];
+    int []vet = new int[10];
+        
+        for(int i=0; i<10; i++){
+            System.out.println("Digite o valor do vetor na posição "+(i+1) +": ");
+            vet[i] = scan.nextInt();
+        if(vet[i] % 2 ==0){
+           vetPar[i] = vet[i];
+        }
+        else{
+            vetImpar[i] = vet[i];
+        }
+    }
+    System.out.println("Imprimir os vetor Impares digite: 'i';");
+    System.out.println("Imprimir os vetor Pares digite: 'p';");
+    System.out.println("Imprimir ambos digite: 's';");
+    System.out.println("Nenhum digite: 'n'.");
+    char key;
+    System.out.println("Digite a opçao desejada: ");
+    key = scan.next().charAt(0);
+    switch(key){
+        case 'i':
+        System.out.println("Impressão vetor Impares.");
+        for(int i=0; i<10; i++){
+            if(vetImpar[i] % 2 == 0 || vetImpar[i] == 0){
+                continue;
+            }
+            System.out.println("Vetor impar posção "+(i+1) +": "+vetImpar[i]);
+        }
+        break;
+        case 'p':
+        System.out.println("Impressão vetor Pares.");
+        for(int i=0; i<10; i++){
+            if(vetPar[i] % 2 != 0 || vetPar[i] == 0){
+                continue;
+            }
+            else{
+                System.out.println("Vetor par, posção "+(i+1) +": "+vetPar[i]);
+            }
+        }
+        break;
+        case 's':
+        System.out.println("Impressão vetor Impares.");
+        for(int i=0; i<10; i++){
+            if(vetImpar[i] % 2 == 0 || vetImpar[i] == 0){
+                continue;
+            }
+            else{
+                System.out.println("Vetor impar posção "+(i+1) +": "+vetImpar[i]);
+            }
+        }
+        System.out.println("Impressão vetor Pares.");
+        for(int i=0; i<10; i++){
+            if(vetPar[i] % 2 != 0 || vetPar[i] == 0){
+                continue;
+            }else{
+                System.out.println("Vetor par posção "+(i+1) +": "+vetPar[i]);
+            }
+        }
+        break;
+        case 'n':
+        System.out.println("Saida solicitada, encenrrando o programa.");
+        break;}
+    }
+    }
+
+
+
+

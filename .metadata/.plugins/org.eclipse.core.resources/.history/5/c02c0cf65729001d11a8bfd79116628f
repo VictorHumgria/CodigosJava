@@ -1,0 +1,8 @@
+
+public class Peixe extends Animal {
+
+	public Peixe() {
+		// TODO Auto-generated constructor stub
+	}
+
+}

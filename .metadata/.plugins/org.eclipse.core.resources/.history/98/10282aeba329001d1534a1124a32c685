@@ -1,0 +1,188 @@
+import java.util.ArrayList;
+import java.util.Scanner;
+
+/*
+	4) A classe Empresa deve possuir as seguintes funcionalidades (métodos).
+	a. cadastrarEmpregado. Onde será permitido realizar o cadastro passando por parâmetro
+	um objeto Empregado como também um sobrecarga deste método para os dados do
+	empregado de forma separada(nome, idade, etc). O novo empregado será adicionado
+	a um vetor de Empregados existente na classe Empresa.
+	b. obterDadosEmpregado. Onde será passado por parâmetro o CPF de um funcionário e
+	será retornado uma referencia ao objeto(Empregado) do empregado que possui
+	aquele CPF.
+	c. listarEmpregados. Onde será listado o CPF e nome de todos os empregados da
+	empresa.
+	d. listarEmpregadosPorGenero. Onde será passado por parâmetro o sexo(M ou F) e será
+	exibido o CPF e nome de todos os empregados que se encaixarem no valor passado
+	por parâmetro.
+	e. qtdEmpregados. Irá retornar um valor inteiro contendo quantos empregados estão
+	cadastrados na empresa.
+	
+	CPF, nome, idade, sexo(M ou F), cargo e salário.
+	*/
+public class Empresa {
+	Scanner scan = new Scanner(System.in);
+	ArrayList<Empregado> e = new ArrayList<Empregado>(); 
+	Empregado emp = new Empregado("Victor", "002", 21, "M", "Vice-Presidente", 10.500);
+	private int qtdEmp=0;
+	
+	public void cadastrarEmpregado() {
+		String nome; String cpf; int idade; String sexo; String cargo; double salario;
+		System.out.println("Digite o nome do funcionario: ");
+		nome = scan.next();
+		emp.setNome(nome);
+		System.out.println("Digite o CPF: ");
+		cpf = scan.next();
+		emp.setCpf(cpf);
+		System.out.println("Digite a Idade: ");
+		idade = scan.nextInt();
+		emp.setIdade(idade);
+		System.out.println("Digite o sexo(M/F): ");
+		sexo = scan.next();
+		emp.setSexo(sexo);
+		System.out.println("Digite o cargo: ");
+		cargo = scan.next();
+		emp.setCargo(cargo);
+		System.out.println("Digite o salario: ");
+		salario = scan.nextDouble();
+		emp.setSalario(salario);
+		System.out.println("-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_");
+	
+		e.add(emp);
+		qtdEmp++;
+		
+	}
+	public void obterDadosEmpregado() {
+		int v=0;
+		String cpf;
+		System.out.println("Digite o cpf do empregado desejado: ");
+		cpf = scan.next();
+		for(int i=0; i<qtdEmp; i++) {
+			if(e.get(i).getCpf().equalsIgnoreCase(cpf)) {
+				System.out.println("Dados do Funcionario: ");
+				System.out.println("Nome: "+e.get(i).getNome());	
+				System.out.println("CPF: "+e.get(i).getCpf());
+				System.out.println("Idade: "+e.get(i).getIdade());
+				System.out.println("Sexo: "+e.get(i).getSexo());
+				System.out.println("Cargo: "+e.get(i).getCargo());
+				System.out.println("Sálario: "+e.get(i).getSalario());
+				System.out.println("-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_");
+				v++;
+				
+			}
+			
+		}
+		if(v==0) {
+			System.out.println("NENHUM REGISTRO ENCONTRADO!!");
+		}
+	}
+	public void listarEmpregados() {
+		System.out.println("LISTA DE TODOS OS FUNCIONARIOS:");
+		for(int i=0; i<qtdEmp; i++) {
+			System.out.println("Nome: "+e.get(i).getNome());	
+			System.out.println("CPF: "+e.get(i).getCpf());
+			System.out.println("Idade: "+e.get(i).getIdade());
+			System.out.println("Sexo: "+e.get(i).getSexo());
+			System.out.println("Cargo: "+e.get(i).getCargo());
+			System.out.println("Sálario: "+e.get(i).getSalario());
+			System.out.println("-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_");
+		}
+	}
+	public void listarEmpregadosPorGenero(String sexo) {
+		int v=0;
+		for(int i=0; i<qtdEmp; i++) {
+			if(e.get(i).getSexo().equalsIgnoreCase(sexo)) {
+				System.out.println("Dados do Funcionario: ");
+				System.out.println("Nome: "+e.get(i).getNome());	
+				System.out.println("CPF: "+e.get(i).getCpf());
+				System.out.println("Idade: "+e.get(i).getIdade());
+				System.out.println("Sexo: "+e.get(i).getSexo());
+				System.out.println("Cargo: "+e.get(i).getCargo());
+				System.out.println("Sálario: "+e.get(i).getSalario());
+				System.out.println("-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_");
+				v++;
+			}
+		}
+		if(v==0) {
+			System.out.println("NENHUM REGISTRO ENCONTRADO!!!");
+		}
+	}
+	public void qtdEmpregados() {
+		System.out.println("Atualmento a empresa possui "+qtdEmp +"Empregados.");
+	}
+	private double aumentarSalario(double percentual) {
+		double salario = emp.getSalario();
+		return salario += salario*(percentual/100);
+	}
+	public void auSalario() {
+		int v=0;
+		String cpf;
+		System.out.println("Digite o cpf do empregado desejado: ");
+		cpf = scan.next();
+		for(int i=0; i<qtdEmp; i++) {
+			if(e.get(i).getCpf().equalsIgnoreCase(cpf)) {
+				System.out.println("Salario atual: "+e.get(i).getSalario());
+				System.out.println("Digite o percentual do aumento: ");
+				double percentual = scan.nextDouble();
+				e.get(i).setSalario(aumentarSalario(percentual));
+				System.out.println("Salario com Reajuste: "+e.get(i).getSalario());
+				System.out.println("-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_");
+				v++;
+				
+			}
+			
+		}
+		if(v==0) {
+			System.out.println("NENHUM REGISTRO ENCONTRADO!!");
+		}
+	}
+	 public void imprimirMenu() {
+		 int op;
+	do{
+		System.out.println("1 – Cadastrar empregado");
+		System.out.println("2 - Consultar dados de um empregado pelo cpf");
+		System.out.println("3 – Aumentar o salário do empregado");
+		System.out.println("4 - Listar empregados");
+		System.out.println("5 - Listar empregados por generos");
+		System.out.println("6 – Excluir empregado pelo cpf");
+		System.out.println("7 – Alterar o nome do empregado pelo cpf");
+		System.out.println("8 – Aumentar os salários dos empregados pelo genero");
+		System.out.println("9 - Sair do sistema");
+		System.out.println("-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_");
+		op = scan.nextInt();
+		switch (op) {
+			case 1:
+				cadastrarEmpregado();
+				op =0;
+				break;
+			case 2:
+				obterDadosEmpregado();
+				op =0;
+				break;
+			case 3:
+				
+				
+				op =0;
+				break;
+			case 4:
+				System.out.println("SAIDA SOLICITADA!!");
+			default:
+				if(op!=4 && op > 4) {
+				System.out.println("OPÇÃO INVALIDA, INSIRA UMA VALIDA:");
+				System.out.println("1 – Cadastrar empregado");
+				System.out.println("2 - Consultar dados de um empregado pelo cpf");
+				System.out.println("3 – Aumentar o salário do empregado");
+				System.out.println("4 - Listar empregados");
+				System.out.println("5 - Listar empregados por generos");
+				System.out.println("6 – Excluir empregado pelo cpf");
+				System.out.println("7 – Alterar o nome do empregado pelo cpf");
+				System.out.println("8 – Aumentar os salários dos empregados pelo genero");
+				System.out.println("9 - Sair do sistema");
+				System.out.println("-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_");
+				}
+				break;
+			}
+		}while(op!=4);
+	}
+	
+}

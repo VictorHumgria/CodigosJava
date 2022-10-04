@@ -1,0 +1,9 @@
+import Animal.java;
+
+public class Peixe extends java {
+
+	public Peixe() {
+		// TODO Auto-generated constructor stub
+	}
+
+}
