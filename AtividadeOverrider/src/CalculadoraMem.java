@@ -11,8 +11,7 @@ e tem as seguintes funções adicionais:
 limpar todos os dados (incluindo a mémoria)*/
 
 public class CalculadoraMem extends Calculadora{
-    protected float valor3;
-
+    private float valor3;
     public float getValor3() {
         return valor3;
     }

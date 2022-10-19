@@ -1,0 +1,176 @@
+Nome: cuecaDiamond 
+Preço: 40.0
+Preço com imposto: 40.0
+-------------------------------
+Nome: Processador 
+Preço: 2000.0
+Preço com imposto: 2000.0Tipo: 1
+-------------------------------+
+Nome: cueca 
+Preço: 15.0
+Preço com imposto: 15.0
+-------------------------------
+Nome: CelularIphone14ProMax
+Preço: 14550.0
+Preço com imposto: 14550.0Tipo: 1
+-------------------------------+
+Nome: Placa de video
+Preço: 5000.0
+Preço com imposto: 5000.0Tipo: 1
+-------------------------------+
+Nome: Farinha 
+Preço: 7.0
+Preço com imposto: 7.0
+-------------------------------
+Nome: Biscoito
+Preço: 3.0
+Preço com imposto: 3.0
+-------------------------------
+Nome: Cachaca cara
+Preço: 20000.0
+Preço com imposto: 20000.0Tipo: 2
+-------------------------------+
+Nome: Cachaca
+Preço: 10.0
+Preço com imposto: 10.0
+-------------------------------
+Nome: MemoriaRam
+Preço: 55.0
+Tipo: 3
+-------------------------------+
+Nome: cuecaDiamond 
+Preço: 40.0
+-------------------------------
+Nome: Processador 
+Preço: 2000.0
+Tipo: 1
+-------------------------------+
+Nome: cueca 
+Preço: 15.0
+-------------------------------
+Nome: CelularIphone14ProMax
+Preço: 14550.0
+Tipo: 1
+-------------------------------+
+Nome: Placa de video
+Preço: 5000.0
+Tipo: 1
+-------------------------------+
+Nome: Farinha 
+Preço: 7.0
+-------------------------------
+Nome: Biscoito
+Preço: 3.0
+-------------------------------
+Nome: Cachaca cara
+Preço: 20000.0
+Tipo: 2
+-------------------------------+
+Nome: Cachaca
+Preço: 10.0
+-------------------------------
+Nome: MemoriaRam
+Preço: 55.0
+Tipo: 3
+-------------------------------+
+Nome: cuecaDiamond 
+Preço: 40.0
+-------------------------------
+Nome: Processador 
+Preço: 2000.0
+Tipo: 1
+-------------------------------+
+Nome: cueca 
+Preço: 15.0
+-------------------------------
+Nome: CelularIphone14ProMax
+Preço: 14550.0
+Tipo: 1
+-------------------------------+
+Nome: Placa de video
+Preço: 5000.0
+Tipo: 1
+-------------------------------+
+Nome: Farinha 
+Preço: 7.0
+-------------------------------
+Nome: Biscoito
+Preço: 3.0
+-------------------------------
+Nome: Cachaca cara
+Preço: 20000.0
+Tipo: 2
+-------------------------------+
+Nome: Cachaca
+Preço: 10.0
+-------------------------------
+Nome: MemoriaRam
+Preço: 55.0
+Tipo: 3
+-------------------------------+
+Nome: cuecaDiamond 
+Preço: 40.0
+-------------------------------
+Nome: Processador 
+Preço: 2000.0
+Tipo: 1
+-------------------------------+
+Nome: cueca 
+Preço: 15.0
+-------------------------------
+Nome: CelularIphone14ProMax
+Preço: 14550.0
+Tipo: 1
+-------------------------------+
+Nome: Placa de video
+Preço: 5000.0
+Tipo: 1
+-------------------------------+
+Nome: Farinha 
+Preço: 7.0
+-------------------------------
+Nome: Biscoito
+Preço: 3.0
+-------------------------------
+Nome: Cachaca cara
+Preço: 20000.0
+Tipo: 2
+-------------------------------+
+Nome: Cachaca
+Preço: 10.0
+-------------------------------
+Nome: MemoriaRam
+Preço: 55.0
+Tipo: 3
+-------------------------------+
+Nome: cuecaDiamond 
+Preço: 40.0
+-------------------------------
+Nome: Processador 
+Preço: 2000.0
+Tipo: 1
+-------------------------------+
+Nome: cueca 
+Preço: 15.0
+-------------------------------
+Nome: CelularIphone14ProMax
+Preço: 14550.0
+Tipo: 1
+-------------------------------+
+Nome: Placa de video
+Preço: 5000.0
+Tipo: 1
+-------------------------------+
+Nome: Farinha 
+Preço: 7.0
+-------------------------------
+Nome: Biscoito
+Preço: 3.0
+-------------------------------
+Nome: Cachaca cara
+Preço: 20000.0
+Tipo: 2
+-------------------------------+
+Nome: Cachaca
+Preço: 10.0
+-------------------------------
